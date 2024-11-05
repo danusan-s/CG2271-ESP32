@@ -212,27 +212,27 @@ void loop() {
 
         if (x == 0) {
             if (y > 0) {
-                command = 1;
+                command = 0x01;
             } else if (y < 0) {
-                command = 2;
+               command = 0x02;
             }
         } else if (y == 0) {
             if (x > 0) {
-                command = 4;
+                command = 0x04;
             } else if (x < 0) {
-                command = 3;
+                command = 0x03;
             }
-        } else if (x > 0) {
-            if (y > 0) {
-                command = 6;
-            } else if (y < 0) {
-                command = 5;
+        } else if (y > 0) {
+            if (x > 0) {
+                command = 0x06;
+            } else if (x < 0) {
+                command = 0x05;
             }
-        } else if (x < 0) {
-            if (y > 0) {
-                command = 8;
-            } else if (y < 0) {
-                command = 7;
+        } else if (y < 0) {
+            if (x > 0) {
+                command = 0x08;
+            } else if (x < 0) {
+                command = 0x07;
             }
         }
 
